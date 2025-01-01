@@ -1,5 +1,14 @@
 image: maven:3-amazoncorretto-17-alpine
 
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
 stages:
   - compile
   - test
