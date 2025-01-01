@@ -1,0 +1,28 @@
+image: maven:3-amazoncorretto-17-alpine⁠
+
+stages:
+  - compile
+  - test
+  - package
+
+compile-job:
+  stage: compile
+  script:
+    - echo "Compiling the code..."
+    - mvn compile
+    - echo "Compile complete."
+
+test-job:   # This job runs in the test stage.
+  stage: test
+  script:
+    - echo "Running unit tests..."
+    - mvn test
+    - echo "Unit tests complete."
+
+package-job:   # This job runs in the test stage.
+  stage: package
+  script:
+    - echo "Packaging... This will take about 60 seconds."
+    - mvn package
+    - echo "Packaging complete."
+
