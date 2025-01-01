@@ -7,7 +7,13 @@ variables:
 cache:
   paths:
     - .m2/repository/
-    - target/
+    - tiles2/target
+    - scripting/target
+    - core/target
+    - taglib/target
+    - tiles/target
+    - mailreader-dao/target
+    - extras/target
 
 stages:
   - compile
