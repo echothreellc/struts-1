@@ -178,7 +178,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>1.4.3</version>
+                    <version>6.0.0</version>
                     <inherited>true</inherited>
                 </plugin>
                 <plugin>
@@ -186,8 +186,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>2.0.2</version>
                     <configuration>
-                        <source>1.4</source>
-                        <target>1.4</target>
+                        <source>17</source>
+                        <target>17</target>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -299,8 +299,8 @@
                     <link>http://commons.apache.org/beanutils/api/</link>
                     <link>http://commons.apache.org/logging/apidocs/</link>
                     <link>http://commons.apache.org/validator/apidocs/</link>
-                    <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
-                    <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
+                    <link>https://docs.oracle.com/en/java/javase/17/docs/api/</link>
+                    <link>https://docs.oracle.com/javaee/1.4/api/</link>
                   </links>
                 </configuration>
             </plugin>
