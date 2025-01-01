@@ -1,0 +1,43 @@
+image: maven:3-amazoncorretto-17-alpine
+
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - tiles2/target
+    - scripting/target
+    - core/target
+    - taglib/target
+    - tiles/target
+    - mailreader-dao/target
+    - extras/target
+
+stages:
+  - compile
+  - test
+  - package
+
+compile-job:
+  stage: compile
+  script:
+    - echo "Compiling the code..."
+    - mvn compile
+    - echo "Compile complete."
+
+test-job:   # This job runs in the test stage.
+  stage: test
+  script:
+    - echo "Running unit tests..."
+    - mvn test
+    - echo "Unit tests complete."
+
+package-job:   # This job runs in the test stage.
+  stage: package
+  script:
+    - echo "Packaging... This will take about 60 seconds."
+    - mvn package
+    - echo "Packaging complete."
+
