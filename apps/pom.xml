@@ -47,8 +47,6 @@
 
    <modules>
       <module>cookbook</module>
-      <module>faces-example1</module>
-      <module>faces-example2</module>
       <module>examples</module>
       <module>blank</module>
       <module>mailreader</module>

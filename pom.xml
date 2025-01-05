@@ -78,7 +78,6 @@
             </activation>
             <modules>
                 <module>el</module>
-                <module>faces</module>
             </modules>
         </profile>
         <profile>
@@ -341,7 +340,6 @@
     </reporting>
     
     <properties>
-        <myfaces.version>1.0.9</myfaces.version>
         <struts.osgi.symbolicName>org.apache.${project.artifactId}</struts.osgi.symbolicName>
         <struts.osgi.export>org.apache.struts.*;version=${project.version}</struts.osgi.export>
         <struts.osgi.import>*</struts.osgi.import>
@@ -377,10 +375,6 @@
                 <artifactId>commons-chain</artifactId>
                 <version>1.2</version>
                 <exclusions>
-                    <exclusion>
-                        <groupId>myfaces</groupId>
-                        <artifactId>myfaces-api</artifactId>
-                    </exclusion>
                     <exclusion>
                         <groupId>javax.portlet</groupId>
                         <artifactId>portlet-api</artifactId>
@@ -446,21 +440,6 @@
                 <artifactId>junit</artifactId>
                 <version>3.8.1</version>
                 <optional>true</optional>
-            </dependency>
-            <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-extensions</artifactId>
-               <version>${myfaces.version}</version>
-            </dependency>
-            <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-impl</artifactId>
-               <version>${myfaces.version}</version>
-            </dependency>
-            <dependency>
-               <groupId>myfaces</groupId>
-               <artifactId>myfaces-jsf-api</artifactId>
-               <version>${myfaces.version}</version>
             </dependency>
             <dependency>
                 <groupId>oro</groupId>
